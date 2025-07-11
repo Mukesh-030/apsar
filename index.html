@@ -125,25 +125,6 @@
       color: var(--primary);
     }
 
-    .contact {
-      background: var(--primary);
-      color: white;
-      padding: 2rem;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    .contact p strong {
-      color: #fff;
-    }
-
-    footer {
-      background: var(--dark);
-      color: #999;
-      text-align: center;
-      padding: 1rem;
-    }
-
     .aspect-ratio-16-9 {
       position: relative;
       width: 100%;
@@ -167,44 +148,145 @@
       transform: scale(1.05);
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
+    .contact {
+      background: var(--primary);
+      color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .contact p strong {
+      color: #fff;
+    }
+
+    footer {
+      background: var(--dark);
+      color: #999;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .home-section {
+      background: var(--light);
+      padding: 5rem 2rem;
+    }
+
+    .home-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1100px;
+      margin: auto;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .home-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .home-text h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .home-text h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin: 0.5rem 0;
+    }
+
+    .typing {
+      color: var(--primary);
+      font-weight: bold;
+      font-size: 1.5rem;
+      height: 2rem;
+      margin-top: 0.5rem;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #00bcd4;
+      animation: blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: #00bcd4; }
+    }
+
+    .home-image {
+      flex: 1;
+      min-width: 250px;
+      text-align: center;
+    }
+
+    .home-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .home-image img:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-hire {
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn-hire:hover {
+      background: #0099aa;
+    }
+
+    @media (max-width: 768px) {
       nav {
         flex-direction: column;
-        align-items: center;
         gap: 1rem;
+      }
+
+      .home-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .home-text h1 {
+        font-size: 2rem;
+      }
+
+      .home-text h2 {
+        font-size: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>APSAR VISUALS</h1>
-    <p>Visual Media & Marketing Studio — "Crafting Visual Stories That Speak"</p>
-  </header>
 
-  <nav>
-    <a href="#services">Services</a>
-    <div class="dropdown">
-      <a href="#portfolio">Portfolio ▾</a>
-      <div class="dropdown-content">
-        <a href="#poster">Poster Design</a>
-        <a href="#reel">Reels & Ads</a>
-        <a href="#shortfilm">Short Film Editing</a>
-        <a href="#thumbnail">YouTube Thumbnails</a>
-        <a href="#content">Content Writing</a>
+  <!-- HOME SECTION -->
+  <section id="home" class="home-section">
+    <div class="home-container">
+      <div class="home-text">
+        <h1>I'm <span style="color: var(--primary);">Mukesh</span></h1>
+        <div class="typing" id="typed-text">Video Editor</div>
+        <button class="btn-hire" onclick="window.location.href='#contact'">Hire Me</button>
+      </div>
+      <div class="home-image">
+        <img src="mukesh.png" alt="Mukesh Photo" />
       </div>
     </div>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="services">
+  </section>
+<section id="services">
     <h2>Our Services</h2>
     <div class="services">
       <div class="card">
@@ -230,7 +312,7 @@
     </div>
   </section>
 
-  <section id="portfolio"> 
+<section id="portfolio"> 
     <h2>Portfolio</h2>
     <div class="portfolio">
       <div class="card" id="poster">
@@ -260,7 +342,7 @@
       <div class="card" id="thumbnail">
         <h4>Thumbnail Designing</h4>
         <div class="aspect-ratio-16-9">
-          <img src="thumbnail.jpg" alt="Thumbnail Sample">
+<img src="thumbnail.jpg" alt="Thumbnail Sample">
         </div>
         <p>Designed high-conversion thumbnails for YouTube and social platforms.</p>
       </div>
@@ -275,7 +357,7 @@
     </div>
   </section>
 
-  <section id="about">
+<section id="about">
     <h2>About APSAR</h2>
     <p>APSAR is a creative studio specializing in photography, editing, and visual storytelling. We help brands and creators turn ideas into scroll-stopping content — from posters and thumbnails to cinematic short films and engaging reels.</p>
 
@@ -303,8 +385,7 @@
       </div>
     </div>
   </section>
-
-  <section id="contact">
+<section id="contact">
     <h2>Contact Us</h2>
     <div class="contact">
       <p>Email: <strong>apsarvisuals@gmail.com</strong></p>
@@ -316,5 +397,40 @@
   <footer>
     &copy; 2025 APSAR. All rights reserved.
   </footer>
+</body>
+</html>
+
+  <!-- Rest of your sections here (services, portfolio, about, contact, etc.) -->
+
+  <!-- Typing Script -->
+  <script>
+    const titles = ["Video Editor", "Album Designer", "Poster Designer", "Reels Creator"];
+    let index = 0;
+    let charIndex = 0;
+    const typedText = document.getElementById("typed-text");
+
+    function type() {
+      if (charIndex <= titles[index].length) {
+        typedText.textContent = titles[index].substring(0, charIndex++);
+        setTimeout(type, 100);
+      } else {
+        setTimeout(erase, 2000);
+      }
+    }
+
+    function erase() {
+      if (charIndex > 0) {
+        typedText.textContent = titles[index].substring(0, --charIndex);
+        setTimeout(erase, 50);
+      } else {
+        index = (index + 1) % titles.length;
+        setTimeout(type, 500);
+      }
+    }
+
+    window.onload = () => {
+      type();
+    };
+  </script>
 </body>
 </html>
