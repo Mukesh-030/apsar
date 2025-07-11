@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>APSAR VISUALS| Visual Media & Marketing Studio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>APSAR VISUALS | Visual Media & Marketing Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
     :root {
       --primary: #00bcd4;
@@ -47,7 +47,6 @@
       justify-content: center;
       gap: 2rem;
       box-shadow: 0 2px 10px var(--shadow);
-      position: relative;
     }
 
     nav a {
@@ -55,7 +54,6 @@
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s;
-      position: relative;
     }
 
     nav a:hover {
@@ -64,7 +62,6 @@
 
     .dropdown {
       position: relative;
-      display: inline-block;
     }
 
     .dropdown-content {
@@ -72,9 +69,9 @@
       position: absolute;
       background-color: #2c2c2c;
       min-width: 180px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
       top: 100%;
+      z-index: 1;
     }
 
     .dropdown-content a {
@@ -147,6 +144,29 @@
       padding: 1rem;
     }
 
+    .aspect-ratio-16-9 {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      overflow: hidden;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+
+    .aspect-ratio-16-9 img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .aspect-ratio-16-9 img:hover {
+      transform: scale(1.05);
+    }
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 2rem;
@@ -159,13 +179,6 @@
         align-items: center;
         gap: 1rem;
       }
-      .card img, #about img {
-  transition: transform 0.3s ease;
-}
-.card img:hover, #about img:hover {
-  transform: scale(1.1);
-}
-
     }
   </style>
 </head>
@@ -199,8 +212,8 @@
         <p>Static and dynamic posters for events, brands, and promotions.</p>
       </div>
       <div class="card">
-        <h3>Events,Reels & Ads</h3>
-        <p>Editing Traditional and wedding events,short-form content, ad reels, and creative motion videos.</p>
+        <h3>Events, Reels & Ads</h3>
+        <p>Editing traditional and wedding events, short-form content, ad reels, and creative motion videos.</p>
       </div>
       <div class="card">
         <h3>Short Film Editing</h3>
@@ -218,78 +231,78 @@
   </section>
 
   <section id="portfolio"> 
-  <h2>Portfolio</h2>
+    <h2>Portfolio</h2>
+    <div class="portfolio">
+      <div class="card" id="poster">
+        <h4>Poster Designing</h4>
+        <div class="aspect-ratio-16-9">
+          <img src="poster.jpg" alt="Poster Sample">
+        </div>
+        <p>Crafted visually compelling posters tailored for events, brands, and promotions.</p>
+      </div>
 
-  <div class="portfolio">
+      <div class="card" id="reel">
+        <h4>Reels Editing</h4>
+        <div class="aspect-ratio-16-9">
+          <img src="reel.jpg" alt="Reel Sample">
+        </div>
+        <p>High-impact social media reels optimized for Instagram and YouTube.</p>
+      </div>
 
-    <div class="card" id="poster">
-      <h4>Poster Designing</h4>
-      <p>Crafted visually compelling posters tailored for events, brands, and promotions. Each design emphasizes clarity, strong composition, and striking typography to immediately capture the viewer's attention and communicate the intended message at a glance.</p>
+      <div class="card" id="shortfilm">
+        <h4>Short Film Editing</h4>
+        <div class="aspect-ratio-16-9">
+          <img src="shortfilm.jpg" alt="Short Film Sample">
+        </div>
+        <p>Cinematic flow, emotion-driven cuts, and seamless storytelling.</p>
+      </div>
+
+      <div class="card" id="thumbnail">
+        <h4>Thumbnail Designing</h4>
+        <div class="aspect-ratio-16-9">
+          <img src="thumbnail.jpg" alt="Thumbnail Sample">
+        </div>
+        <p>Designed high-conversion thumbnails for YouTube and social platforms.</p>
+      </div>
+
+      <div class="card" id="content">
+        <h4>Content Writing</h4>
+        <div class="aspect-ratio-16-9">
+          <img src="content.jpg" alt="Content Writing Sample">
+        </div>
+        <p>Engaging captions, product descriptions, and brand-aligned scripts.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="card" id="reel">
-      <h4>Reels Editing</h4>
-      <p>Produced high-impact social media reels optimized for Instagram and YouTube. Each reel focuses on dynamic transitions, rhythmic pacing, and storytelling techniques that drive engagement and leave a lasting impression on the audience.</p>
+  <section id="about">
+    <h2>About APSAR</h2>
+    <p>APSAR is a creative studio specializing in photography, editing, and visual storytelling. We help brands and creators turn ideas into scroll-stopping content — from posters and thumbnails to cinematic short films and engaging reels.</p>
+
+    <p><strong>Tools we use:</strong></p>
+    <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; margin-top: 1rem;">
+      <div style="text-align: center;">
+        <img src="ps.jpg" alt="Photoshop" width="50">
+        <p style="margin: 0.5rem 0 0;">Photoshop</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="prpro.jpg" alt="Premiere Pro" width="50">
+        <p style="margin: 0.5rem 0 0;">Premiere Pro</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="ae.png" alt="After Effects" width="50">
+        <p style="margin: 0.5rem 0 0;">After Effects</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="cv.png" alt="Canva" width="50">
+        <p style="margin: 0.5rem 0 0;">Canva</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="cc.png" alt="CapCut" width="50">
+        <p style="margin: 0.5rem 0 0;">CapCut</p>
+      </div>
     </div>
-
-    <div class="card" id="shortfilm">
-      <h4>Short Film Editing</h4>
-      <p>Edited narrative-driven short films with a focus on cinematic flow, emotion-driven cuts, and seamless audio-visual synchronization. Work includes color correction, sound design, and storytelling enhancement from raw footage to final output.</p>
-    </div>
-
-    <div class="card" id="thumbnail">
-      <h4>Thumbnail Designing</h4>
-      <p>Designed high-conversion thumbnails for digital platforms like YouTube and social media. Each thumbnail is created with a focus on visual hierarchy, expressive imagery, and bold titles to increase click-through rates and viewer curiosity.</p>
-    </div>
-
-    <div class="card" id="content">
-      <h4>Content Writing</h4>
-      <p>Delivered engaging content ranging from catchy ad copy to long-form brand scripts. Specialized in writing tailored captions, product descriptions, video scripts, and storytelling content that aligns with the brand’s tone and audience expectations.</p>
-    </div>
-
-  </div>
-</section>
-<section id="about"> 
-  <h2>About APSAR</h2>
-
-  <p>APSAR is a creative studio specializing in photography, editing, and visual storytelling. We help brands and creators turn ideas into scroll-stopping content — from posters and thumbnails to cinematic short films and engaging reels.</p>
-
-  <p><strong>Tools we use:</strong></p>
-
-  <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; margin-top: 1rem;">
-
-    <div style="text-align: center;">
-      <img src="ps.jpg" alt="Photoshop" width="50">
-      <p style="margin: 0.5rem 0 0;">Photoshop</p>
-    </div>
-
-    <div style="text-align: center;">
-      <img src="prpro.jpg" alt="Premiere Pro" width="50">
-      <p style="margin: 0.5rem 0 0;">Premiere Pro</p>
-    </div>
-
-    <div style="text-align: center;">
-      <img src="ae.png" alt="After Effects" width="50">
-      <p style="margin: 0.5rem 0 0;">After Effects</p>
-    </div>
-
-    <div style="text-align: center;">
-      <img src="cv.png" alt="Canva" width="50">
-      <p style="margin: 0.5rem 0 0;">Canva</p>
-    </div>
-
-    <div style="text-align: center;">
-      <img src="cc.png" alt="CapCut" width="50">
-      <p style="margin: 0.5rem 0 0;">CapCut</p>
-    </div>
-
-  </div>
-</section>
-
-
-
-
-
+  </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
